@@ -292,9 +292,7 @@ img {
   background-size: cover;
 }
 
-@media screen and (min-resolution: 2dppx),
-  (min-resolution: 192dpi),
-  (-webkit-min-device-pixel-ratio: 2) {
+@media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
   .hero {
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -866,9 +864,7 @@ img {
       url(../images/people-office-tab.jpg);
   }
 
-  @media screen and (min-resolution: 2dppx),
-    (min-resolution: 192dpi),
-    (-webkit-min-device-pixel-ratio: 2) {
+  @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .hero {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
@@ -977,9 +973,7 @@ img {
       url(../images/people-office.jpg);
   }
 
-  @media screen and (min-resolution: 2dppx),
-    (min-resolution: 192dpi),
-    (-webkit-min-device-pixel-ratio: 2) {
+  @media screen and (min-resolution: 2dppx), (min-resolution: 192dpi) {
     .hero {
       background-image: linear-gradient(
           rgba(46, 47, 66, 0.7),
