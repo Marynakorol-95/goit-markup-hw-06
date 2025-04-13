@@ -48,9 +48,9 @@ img {
 
 .container {
   width: 100%;
-  max-width: 318px;
-  padding-left: 15px;
-  padding-right: 15px;
+  max-width: 320px;
+  padding-left: 16px;
+  padding-right: 16px;
   margin: 0 auto;
 }
 
@@ -91,6 +91,7 @@ img {
 .header .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .header-nav {
@@ -108,7 +109,6 @@ img {
   color: #4d5ae5;
   padding-top: 16px;
   padding-bottom: 16px;
-  margin-right: 76px;
 }
 
 .header-logo span {
@@ -189,22 +189,50 @@ img {
 }
 
 .mob-menu {
-  width: 100vw;
-  height: 100%;
-  background-color: #ffffff;
   position: fixed;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  padding: 24px 24px 40px 16px;
+  z-index: 10;
+  background-color: #ffffff;
+
+  padding: 72px 24px 40px 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   overflow: auto;
+
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.mob-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/*.mob-menu-container {
+  position: relative;
+  padding-top: 72px;
+  padding-bottom: 40px;
+  padding-left: 16px;
+  padding-right: 24px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}*/
+
 .menu-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
   display: block;
   margin-left: auto;
   margin-bottom: 24px;
@@ -220,11 +248,13 @@ img {
 }
 
 .mob-menu-list {
-  margin-bottom: 24px;
+  margin-bottom: auto;
 }
+
 .mob-menu-item:not(:last-child) {
   margin-bottom: 40px;
 }
+
 .mob-menu-link {
   font-weight: 700;
   font-size: 36px;
@@ -232,18 +262,19 @@ img {
   letter-spacing: 0.02em;
   color: #2e2f42;
 }
+
 .mob-menu-link.active {
   color: #404bbf;
 }
+
 .mob-address {
   font-style: normal;
 }
-.mob-address-list {
-  margin-bottom: 40px;
-}
+
 .mob-address-item:not(:last-child) {
   margin-bottom: 24px;
 }
+
 .mob-address-link {
   font-weight: 500;
   font-size: 20px;
@@ -255,14 +286,19 @@ img {
 .mob-address-link.active {
   color: #4d5ae5;
 }
+
 .mob-social-list {
   display: flex;
+  justify-content: center;
   gap: 40px;
+  margin-top: 48px;
 }
+
 .mob-social-item {
   width: 40px;
   height: 40px;
 }
+
 .mob-social-link {
   width: 100%;
   height: 100%;
@@ -272,6 +308,7 @@ img {
   justify-content: center;
   border-radius: 50%;
 }
+
 .mob-social-icon {
   fill: #ffffff;
 }
@@ -366,6 +403,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 72px;
+  justify-content: center;
 }
 
 .team-item {
